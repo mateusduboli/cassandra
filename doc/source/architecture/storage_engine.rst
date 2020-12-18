@@ -47,9 +47,10 @@ All mutations write optimized by storing in commitlog segments, reducing the num
     - ``commitlog_sync_period_in_ms``: Time to wait between "periodic" fsyncs
     
       *Default Value:* 10000
+    
+  **NOTE: In the event of an unexpected shutdown, Cassandra can lose up to the sync period or more if the sync is delayed. If using "batch" mode, it is recommended to store commitlogs in a separate, dedicated device.**
 
- **NOTE: In the event of an unexpected shutdown, Cassandra can lose up to the sync period or more if the sync is delayed. If using "batch" mode, it is recommended to store commitlogs in a separate, dedicated device.**
-
+   
 
 - ``commitlog_directory``: This option is commented out by default When running on magnetic HDD, this should be a separate spindle than the data directories. If not set, the default directory is $CASSANDRA_HOME/data/commitlog.
 
