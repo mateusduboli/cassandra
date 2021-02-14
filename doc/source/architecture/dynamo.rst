@@ -256,7 +256,7 @@ To use transient replication, you first need to enable it in
 ``cassandra.yaml``. Once enabled, both ``SimpleStrategy`` and
 ``NetworkTopologyStrategy`` can be configured to transiently replicate data.
 You configure it by specifying replication factor as
-``<total_replicas>/<transient_replicas`` Both ``SimpleStrategy`` and
+``<total_replicas>/<transient_replicas>`` Both ``SimpleStrategy`` and
 ``NetworkTopologyStrategy`` support configuring transient replication.
 
 Transiently replicated keyspaces only support tables created with read_repair
